@@ -48,7 +48,7 @@ function moveToNextSlide() {
   } else {
     slidePosition += 1;
   }
-  
+
   updateSlidePosition(); // this is how you call a function within a function
 }
 function moveToPrevSlide() {
