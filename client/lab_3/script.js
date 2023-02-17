@@ -27,9 +27,9 @@ function updateSlidePosition() {
   // outside your .forEach,
   // add a 'visible' class to the slide at the current slidePosition in slides
 
-  slidesArray.forEach(slide => {
-    slide.classList.remove('visible');
-    slide.classList.add('hidden');
+  slidesArray.forEach(slides => {
+    slides.classList.remove('visible');
+    slides.classList.add('hidden');
   });
 
   slides[slidePosition].classList.add('visible');
