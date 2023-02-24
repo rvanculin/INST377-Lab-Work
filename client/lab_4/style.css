@@ -8,7 +8,7 @@
 */
 
 html {
-  background-color: #f3f8f1;
+  background-color: rgb(254, 250, 224);
   font-size: 16px;
   min-width: 300px;
   overflow-x: hidden;
@@ -30,7 +30,7 @@ body {
   font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’, ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  background-color: rgb(243, 248, 241);
+  background-color: rgb(254, 250, 224);
 }
 
 
@@ -265,7 +265,7 @@ form input {
     /* Rules in here will only apply when a screen is the correct size */
     /* check it out by using your developer tools to shrink your screen-size */
     .container {
-      background-color: rgba(204, 8, 162, 0.65);
+      background-color: rgba(254, 250, 224);
       flex-direction: column;
       justify-content: center;
       align-items: center;
