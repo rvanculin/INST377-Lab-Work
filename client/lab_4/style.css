@@ -136,7 +136,7 @@ form {
 .footer {
   flex-shrink: 0;
   padding: 1rem;
-  background-color: rgba(0, 139, 139, 0.8);
+  background-color: rgb(159, 117, 75);
   font-size: 1.2rem;
   font-weight: 600;
 }
