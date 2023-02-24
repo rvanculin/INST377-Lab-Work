@@ -269,7 +269,17 @@ form input {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      text-align: left;
+    }
+
+    .box {
+      background-color: rgba(239, 239, 239, 0.40);
+      border: 2px solid;
+      border-radius: 4px;
+    
+      width: 100%;
+      height:fit-content;
+      padding: 1.5rem;
+      margin: 0 auto;
     }
 
 
