@@ -269,14 +269,8 @@ form input {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: left;
     }
 
-    .right_section {
-      background-color: rgba(204, 213, 174);
-      flex: 1 2 auto;
-      margin: 1rem;
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-    }
+
 }
