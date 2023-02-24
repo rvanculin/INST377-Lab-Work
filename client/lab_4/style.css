@@ -270,4 +270,13 @@ form input {
       justify-content: center;
       align-items: center;
     }
+
+    .right_section {
+      background-color: rgba(204, 213, 174);
+      flex: 1 2 auto;
+      margin: 1rem;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
 }
