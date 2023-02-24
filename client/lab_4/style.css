@@ -129,7 +129,6 @@ form {
   flex: 1 2 auto;
   margin: 1rem;
   align-items: center;
-  max-width: 450px;
   display: flex;
   flex-direction: column;
 }
@@ -236,17 +235,6 @@ div.carousel {
   border: 2px solid rgb(99,99,99); /* shorthand for how to do a border */
 }
 
-.prev:focus,
-.next:focus {
-  margin: 0;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: aqua;
-}
-
-
 form input {
     /* This is a hack to make sure our boxes line up with one another nicely */
     width: 100%;
@@ -278,5 +266,8 @@ form input {
     /* check it out by using your developer tools to shrink your screen-size */
     .container {
       background-color: rgba(204, 8, 162, 0.65);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 }
