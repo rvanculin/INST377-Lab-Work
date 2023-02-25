@@ -280,5 +280,13 @@ form input {
       margin: 10px auto;
     }
 
+    .right_section {
+      background-color: rgba(204, 213, 174);
+      flex: 1 2 auto;
+      margin: 1rem;
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+    }
 
 }
