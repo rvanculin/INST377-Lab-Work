@@ -265,7 +265,6 @@ form input {
     /* Rules in here will only apply when a screen is the correct size */
     /* check it out by using your developer tools to shrink your screen-size */
     .container {
-      background-color: rgba(254, 250, 224);
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -281,7 +280,6 @@ form input {
     }
 
     .right_section {
-      background-color: rgba(204, 213, 174);
       flex: 1 2 auto;
       margin: 1rem;
       align-items: flex-start;
