@@ -5,18 +5,18 @@
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
-  max = Math.floor(max);
+  max = Math.ceil(max);
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 function injectHTML(list) {
   console.log('Fired injectHTML')
-  const target = document.querySelector('#restaurant_list')
+  const target = document.querySelector('#restaurant_list');
   target.innerHTML = '';
   list.forEach((item) => {
     const str = `<li>${item.name}</li>`;
     target.innerHTML += str
-  });
+  })
 }
 
 /* A quick filter that will return something based on a matching input */
@@ -31,7 +31,7 @@ function filterList(list, query) {
 function cutRestaurantList(list) {
   console.log('fired cut list');
   const range = [...Array(15).keys()];
-  const newArray = range.map((item) => {
+  return newArray = range.map((item) => {
     const index = getRandomIntInclusive(0, list.length -1);
     return list[index]
   })
@@ -39,9 +39,9 @@ function cutRestaurantList(list) {
 
 async function mainEvent() { // the async keyword means we can make API requests
   const mainForm = document.querySelector('.main_form'); // This class name needs to be set on your form before you can listen for an event on it
-  const filterButton = document.querySelector('.filter_button');
+  const filterButton = document.querySelector('#filter_button');
   const loadDataButton = document.querySelector('#data_load');
-  const generateListButton = document.querySelector('.generate');
+  const generateListButton = document.querySelector('#generate');
   let currentList = []; // this is "scoped" to the main event function
   
   /* We need to listen to an "event" to have something happen in our page - here we're listening for a "submit" */
@@ -79,8 +79,8 @@ async function mainEvent() { // the async keyword means we can make API requests
 
   generateListButton.addEventListener('click', (event) => {
       console.log('generate new list');
-      const restaurantsList = cutRestaurantList(currentList);
-      injectHTML(restaurantsList);
+      const restaurantList = cutRestaurantList(currentList);
+      injectHTML(restaurantList);
   })
 
   /*
