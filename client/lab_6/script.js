@@ -44,7 +44,7 @@ async function mainEvent() { // the async keyword means we can make API requests
   const generateListButton = document.querySelector('#generate');
   const loadAnimation = document.querySelector('#data_load_animation');
   loadAnimation.style.display = 'none';
-  // let currentList = []; // this is "scoped" to the main event function
+  let currentList = []; // this is "scoped" to the main event function
 
   //animation 
 
