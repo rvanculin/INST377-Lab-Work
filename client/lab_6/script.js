@@ -66,7 +66,7 @@ async function mainEvent() { // the async keyword means we can make API requests
     currentList = await results.json();
     loadAnimation.style.display = 'none';
     console.table(currentList);
-    injectHTML(currentList);
+    //injectHTML(currentList);
  
   });
 
