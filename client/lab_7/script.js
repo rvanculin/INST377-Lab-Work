@@ -99,7 +99,7 @@ async function mainEvent() {
     console.log("generate new list");
     currentList = cutRestaurantList(storedList);
     console.log(currentList);
-    injectHTML(currentList);
+    injectHTML(storedList);
   });
 
   textField.addEventListener("input", (event) => {
