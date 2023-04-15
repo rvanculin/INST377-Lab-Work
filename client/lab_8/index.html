@@ -4,7 +4,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rachel's Labs For INST377</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+
   </head>
   <body>
     <div class="wrapper">
@@ -16,30 +32,41 @@
 
           <form
             action="https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json"
-            class="box main_form">
+            class="box main_form"
+          >
             <button type="button" id="data_load">Load County Data</button>
             <div>
-              <label for="resto">Restaurant Name</label>
-              <input type="text" name="resto" id="resto"/>
+              <label for="resto">Filter By Restaurant Name</label>
+              <input type="text" name="resto" id="resto" />
             </div>
             <div class="button">
-            <button type="button" id="filter_button">Filter Data</button>
-            <button type="button" id="generate">Generate List</button>
+              <!-- <button type="button" id="filter_button">Filter Data</button> -->
+              <button type="button" id="generate">Generate List</button>
             </div>
           </form>
         </div>
         <div class="right_section box">
           <h3>Local Restaurants List</h3>
+          <div id="map" class="box"></div>
           <ol class="box" id="restaurant_list">
             A List of Local Restaurants
           </ol>
-          <div class="lds-ellipsis" id="data_load_animation"><div></div><div></div><div></div><div></div></div>
+          <div class="lds-ellipsis" id="data_load_animation">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
       </div>
       <footer class="footer">
-        <a href="http://github.com/rvanculin/INST377-Lab-Work" target="_blank" rel="noopener noreferrer">
-            Rachel's gitHub Page
-          </a>
+        <a
+          href="http://github.com/rvanculin/INST377-Lab-Work"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Rachel's gitHub Page
+        </a>
       </footer>
     </div>
     <script src="./script.js"></script>
