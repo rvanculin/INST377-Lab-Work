@@ -60,6 +60,7 @@ function getRandomIntInclusive(min, max) {
   async function mainEvent() {
     const mainForm = document.querySelector(".main_form"); 
     const loadDataButton = document.querySelector("#data_load");
+    const clearDataButton = document.querySelector("#data_clear");
     const generateListButton = document.querySelector("#generate");
     const textField = document.querySelector("#resto");
   
@@ -70,11 +71,11 @@ function getRandomIntInclusive(min, max) {
     const carto = initMap();
      
     const storedData = localStorage.getItem('storedData');
-    const parsedData = JSON.parse(storedData);
+    let parsedData = JSON.parse(storedData);
 
-    if(parsedData.length > 0){
-        generateListButton.classList.remove("hidden")
-    }
+    if(parsedData?.length > 0){
+         generateListButton.classList.remove("hidden")
+     }
   
     let currentList = [];
   
@@ -96,6 +97,11 @@ function getRandomIntInclusive(min, max) {
       // This changes the response from the GET into data we can use - an "object"
       const storedList = await results.json();
       localStorage.setItem('storedData', JSON.stringify(storedList));
+      parsedData = storedList;
+
+      if(storedList?.length > 0){
+        generateListButton.classList.remove("hidden")
+      }
 
       loadAnimation.style.display = "none";
       //console.table(storedList);
@@ -117,6 +123,13 @@ function getRandomIntInclusive(min, max) {
       injectHTML(newList);
       markerPlace(newList, carto);
     });
+
+    clearDataButton.addEventListener("click", (event) => {
+       console.log('clear browser data'); 
+       localStorage.clear();
+       console.log('localStorage Check', localStorage.getItem("storedData"));
+    })
+
   }
   
   document.addEventListener("DOMContentLoaded", async () => mainEvent()); // the async keyword means we can make API requests
